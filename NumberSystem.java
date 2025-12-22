@@ -72,4 +72,42 @@ public class NumberSystem {
 
 
 
+
+
+
+// Sum of first N natural numbers
+// Input: 5 → Output: 15
+
+
+ class Number3 {
+	public static void main(String...somu) {
+		int i=0;
+		for(int n=1;n<=5;n++) {
+			i+=n;
+		}
+		System.out.println(i);
+	}
+
+
+}
+
+
+// Sum of even numbers between 1 to N
+//  Input: 10 → Output: 30
+
+
+class Number4 {
+	public static void main(String...somu) {
+		int i=0;
+		for(int n=1;n<=10;n++) {
+			if(n%2==0) {
+				i+=n;
+			}
+		}
+		System.out.println(i);
+	}
+
+
+}
+
 // Updated on 22 Dec
