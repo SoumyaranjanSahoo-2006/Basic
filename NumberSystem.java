@@ -28,3 +28,48 @@ public class NumberSystem {
 
 
 // Updated on 21 Dec
+
+
+
+// Print even numbers from 1 to N
+//  Input: 10 → Output: 2 4 6 8 10
+
+
+
+ class Number1 {
+	public static void main(String...somu) {
+		
+		for(int n=1;n<=10;n++) {
+			if(n%2==0) {
+				System.out.println(n);
+			}
+		}
+	}
+
+
+}
+
+
+
+
+
+// Print odd numbers from 1 to N
+// Input: 10 → Output: 1 3 5 7 9
+
+
+ class Number2 {
+	public static void main(String...somu) {
+		
+		for(int n=1;n<=10;n++) {
+			if(n%2!=0) {
+				System.out.println(n);
+			}
+		}
+	}
+
+
+}
+
+
+
+// Updated on 22 Dec
