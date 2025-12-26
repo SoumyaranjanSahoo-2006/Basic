@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CSS Grid</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  background: #f4f6f8;
+  padding: 40px;
+}
+
+.title {
+  text-align: center;
+  margin-bottom: 30px;
+  color: #333;
+}
+
+/* Grid Layout */
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+}
+
+/* Grid Items */
+.grid-item {
+  background: #ffffff;
+  padding: 30px;
+  text-align: center;
+  border-radius: 12px;
+  font-size: 18px;
+  font-weight: bold;
+  color: #444;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.grid-item:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+  </style>
+</head>
+<body>
+
+  <h1 class="title">My Grid Section</h1>
+
+  <div class="grid-container">
+    <div class="grid-item">HTML</div>
+    <div class="grid-item">CSS</div>
+    <div class="grid-item">JavaScript</div>
+    <div class="grid-item">Git & GitHub</div>
+    <div class="grid-item">Firebase</div>
+    <div class="grid-item">Projects</div>
+  </div>
+
+</body>
+</html>
