@@ -208,6 +208,77 @@ body {
 }
 
 
+.about {
+  background: #020617;
+  color: #e5e7eb;
+  padding: 80px 10%;
+}
+
+.about-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 50px;
+  align-items: center;
+}
+
+/* Image */
+.about-image img {
+  width: 100%;
+  max-width: 380px;
+  display: block;
+  margin: auto;
+}
+
+/* Content */
+.about-content h2 {
+  font-size: 36px;
+  color: #38bdf8;
+  margin-bottom: 10px;
+}
+
+.about-content h3 {
+  font-size: 22px;
+  margin-bottom: 20px;
+  color: #cbd5f5;
+}
+
+.about-content p {
+  font-size: 16px;
+  line-height: 1.8;
+  margin-bottom: 15px;
+  max-width: 520px;
+}
+
+/* Button */
+.about-btn {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 12px 30px;
+  border-radius: 30px;
+  background: linear-gradient(135deg, #38bdf8, #6366f1);
+  color: #fff;
+  text-decoration: none;
+  font-weight: 600;
+  transition: 0.3s ease;
+}
+
+.about-btn:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 25px rgba(99, 102, 241, 0.6);
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .about {
+    text-align: center;
+  }
+
+  .about-content p {
+    margin: auto;
+  }
+}
+
+
   </style>
 </head>
 <body>
@@ -273,5 +344,34 @@ body {
     <img src="https://cdn-icons-png.flaticon.com/512/921/921347.png" alt="Developer">
   </div>
 </section>
+
+
+<section class="about" id="about">
+  <div class="about-container">
+    
+    <div class="about-image">
+      <img src="https://cdn-icons-png.flaticon.com/512/4140/4140048.png" alt="About Me">
+    </div>
+
+    <div class="about-content">
+      <h2>About Me</h2>
+      <h3>Who I Am</h3>
+      <p>
+        I am <strong>Soumya</strong>, a passionate B.Tech Computer Science Engineering student.
+        I love building clean, responsive, and user-friendly websites.
+        Currently, I am improving my skills in web development and exploring new technologies.
+      </p>
+
+      <p>
+        I believe in continuous learning and practical implementation.
+        My goal is to become a skilled software developer and create impactful digital solutions.
+      </p>
+
+      <a href="#contact" class="about-btn">Let’s Connect</a>
+    </div>
+
+  </div>
+</section>
+
 </body>
 </html>
