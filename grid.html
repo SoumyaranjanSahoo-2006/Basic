@@ -284,51 +284,76 @@ body {
   background: #020617;
   color: #e5e7eb;
   padding: 80px 10%;
-  text-align: center;
 }
 
 .section-title {
+  text-align: center;
   font-size: 36px;
   color: #38bdf8;
-  margin-bottom: 10px;
+  margin-bottom: 8px;
 }
 
 .section-subtitle {
-  font-size: 16px;
-  color: #cbd5f5;
+  text-align: center;
   margin-bottom: 50px;
+  color: #cbd5f5;
 }
 
-/* Grid */
-.skills-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-  gap: 25px;
+/* Container */
+.skills-container {
+  max-width: 700px;
+  margin: auto;
 }
 
-/* Card */
-.skill-card {
+/* Skill */
+.skill {
+  margin-bottom: 25px;
+}
+
+.skill-info {
+  display: flex;
+  justify-content: space-between;
+  font-size: 16px;
+  margin-bottom: 6px;
+}
+
+/* Bar */
+.skill-bar {
   background: #0f172a;
-  padding: 30px 20px;
-  border-radius: 16px;
-  transition: 0.3s ease;
-  cursor: pointer;
+  height: 10px;
+  border-radius: 10px;
+  overflow: hidden;
 }
 
-.skill-card i {
-  font-size: 40px;
-  color: #38bdf8;
-  margin-bottom: 15px;
+/* Progress */
+.skill-progress {
+  height: 100%;
+  border-radius: 10px;
+  background: linear-gradient(135deg, #38bdf8, #6366f1);
+  animation: fill 2s ease forwards;
 }
 
-.skill-card h3 {
-  font-size: 18px;
+/* Individual skill widths */
+.skill-progress.html { width: 90%; }
+.skill-progress.css { width: 85%; }
+.skill-progress.js { width: 70%; }
+.skill-progress.git { width: 75%; }
+.skill-progress.firebase { width: 65%; }
+
+/* Animation */
+@keyframes fill {
+  from {
+    width: 0;
+  }
 }
 
-.skill-card:hover {
-  transform: translateY(-10px);
-  box-shadow: 0 10px 25px rgba(56, 189, 248, 0.3);
+/* Mobile */
+@media (max-width: 600px) {
+  .skills {
+    padding: 60px 6%;
+  }
 }
+
 
   </style>
 </head>
@@ -424,40 +449,61 @@ body {
   </div>
 </section>
 
+
 <section class="skills" id="skills">
   <h2 class="section-title">My Skills</h2>
-  <p class="section-subtitle">Technologies I’m currently working with</p>
+  <p class="section-subtitle">My technical level</p>
 
-  <div class="skills-grid">
+  <div class="skills-container">
 
-    <div class="skill-card">
-      <i class="fa-brands fa-html5"></i>
-      <h3>HTML</h3>
+    <div class="skill">
+      <div class="skill-info">
+        <span>HTML</span>
+        <span>90%</span>
+      </div>
+      <div class="skill-bar">
+        <div class="skill-progress html"></div>
+      </div>
     </div>
 
-    <div class="skill-card">
-      <i class="fa-brands fa-css3-alt"></i>
-      <h3>CSS</h3>
+    <div class="skill">
+      <div class="skill-info">
+        <span>CSS</span>
+        <span>85%</span>
+      </div>
+      <div class="skill-bar">
+        <div class="skill-progress css"></div>
+      </div>
     </div>
 
-    <div class="skill-card">
-      <i class="fa-brands fa-js"></i>
-      <h3>JavaScript</h3>
+    <div class="skill">
+      <div class="skill-info">
+        <span>JavaScript</span>
+        <span>70%</span>
+      </div>
+      <div class="skill-bar">
+        <div class="skill-progress js"></div>
+      </div>
     </div>
 
-    <div class="skill-card">
-      <i class="fa-brands fa-git-alt"></i>
-      <h3>Git</h3>
+    <div class="skill">
+      <div class="skill-info">
+        <span>Git & GitHub</span>
+        <span>75%</span>
+      </div>
+      <div class="skill-bar">
+        <div class="skill-progress git"></div>
+      </div>
     </div>
 
-    <div class="skill-card">
-      <i class="fa-brands fa-github"></i>
-      <h3>GitHub</h3>
-    </div>
-
-    <div class="skill-card">
-      <i class="fa-solid fa-database"></i>
-      <h3>Firebase</h3>
+    <div class="skill">
+      <div class="skill-info">
+        <span>Firebase</span>
+        <span>65%</span>
+      </div>
+      <div class="skill-bar">
+        <div class="skill-progress firebase"></div>
+      </div>
     </div>
 
   </div>
