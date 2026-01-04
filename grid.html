@@ -355,6 +355,92 @@ body {
 }
 
 
+.skills {
+  background: #020617;
+  color: #e5e7eb;
+  padding: 80px 10%;
+}
+
+.section-title {
+  text-align: center;
+  font-size: 36px;
+  color: #38bdf8;
+}
+
+.section-subtitle {
+  text-align: center;
+  margin-bottom: 50px;
+  color: #cbd5f5;
+}
+
+/* Wrapper */
+.skills-wrapper {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 40px;
+}
+
+/* Category Card */
+.skill-category {
+  background: #0f172a;
+  padding: 30px;
+  border-radius: 18px;
+}
+
+.skill-category h3 {
+  margin-bottom: 20px;
+  color: #38bdf8;
+  font-size: 22px;
+}
+
+/* Skill */
+.skill {
+  margin-bottom: 18px;
+}
+
+.skill span {
+  font-size: 15px;
+  display: block;
+  margin-bottom: 6px;
+}
+
+/* Bar */
+.bar {
+  background: #020617;
+  height: 8px;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+/* Progress */
+.progress {
+  height: 100%;
+  background: linear-gradient(135deg, #38bdf8, #6366f1);
+  border-radius: 10px;
+  animation: fill 2s ease forwards;
+}
+
+/* Widths */
+.progress.html { width: 90%; }
+.progress.css { width: 85%; }
+.progress.js { width: 70%; }
+.progress.firebase { width: 65%; }
+.progress.git { width: 80%; }
+.progress.github { width: 75%; }
+
+@keyframes fill {
+  from { width: 0; }
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+  .skills {
+    padding: 60px 6%;
+  }
+}
+
+
+
   </style>
 </head>
 <body>
@@ -503,6 +589,61 @@ body {
       </div>
       <div class="skill-bar">
         <div class="skill-progress firebase"></div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+<section class="skills" id="skills">
+  <h2 class="section-title">My Skills</h2>
+  <p class="section-subtitle">What I work with</p>
+
+  <div class="skills-wrapper">
+
+    <!-- Frontend -->
+    <div class="skill-category">
+      <h3>Frontend</h3>
+
+      <div class="skill">
+        <span>HTML</span>
+        <div class="bar"><div class="progress html"></div></div>
+      </div>
+
+      <div class="skill">
+        <span>CSS</span>
+        <div class="bar"><div class="progress css"></div></div>
+      </div>
+
+      <div class="skill">
+        <span>JavaScript</span>
+        <div class="bar"><div class="progress js"></div></div>
+      </div>
+    </div>
+
+    <!-- Backend -->
+    <div class="skill-category">
+      <h3>Backend</h3>
+
+      <div class="skill">
+        <span>Firebase</span>
+        <div class="bar"><div class="progress firebase"></div></div>
+      </div>
+    </div>
+
+    <!-- Tools -->
+    <div class="skill-category">
+      <h3>Tools</h3>
+
+      <div class="skill">
+        <span>Git</span>
+        <div class="bar"><div class="progress git"></div></div>
+      </div>
+
+      <div class="skill">
+        <span>GitHub</span>
+        <div class="bar"><div class="progress github"></div></div>
       </div>
     </div>
 
